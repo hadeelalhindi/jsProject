@@ -1,0 +1,234 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Function Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #2980b9;
+    }
+</style>
+</head>
+<body>
+
+<h1>Function Example</h1>
+<p>Click the button to change the text color!</p>
+
+<button onclick="changeColor()">Change Color</button>
+
+<p id="text">Hello, World!</p>
+
+<script>
+    // تعريف الدالة changeColor
+    function changeColor() {
+        // الحصول على العنصر بالمعرف text
+        var textElement = document.getElementById("text");
+        // تغيير لون النص إلى اللون الأحمر
+        textElement.style.color = "red";
+    }
+</script>
+
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Function Example</title>
+</head>
+<body>
+
+<h1>Function Example</h1>
+<p>Enter your name:</p>
+<input type="text" id="nameInput">
+<button onclick="greet()">Greet</button>
+
+<p id="greeting"></p>
+
+<script>
+    // تعريف الدالة greet التي تأخذ متغيرًا يمثل اسم المستخدم
+    function greet() {
+        // الحصول على قيمة الاسم من الحقل النصي
+        var name = document.getElementById("nameInput").value;
+        // عرض رسالة التحية باستخدام الاسم المستقبل كمتغير
+        document.getElementById("greeting").textContent = "Hello, " + name + "!";
+    }
+</script>
+
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome Message</title>
+<script>
+    // تعريف الدالة welcomeMsg التي تقوم بإرجاع اسم المستخدم
+    function welcomeMsg(msg) {
+        alert(msg); // عرض رسالة الترحيب
+        var name = prompt("What is your name?"); // استقبال اسم المستخدم
+        return name; // إرجاع قيمة اسم المستخدم
+    }
+
+    // استدعاء الدالة welcomeMsg وتخزين قيمتها في متغير firstName
+    var firstName = welcomeMsg("Hi");
+    // عرض رسالة الترحيب باستخدام اسم المستخدم المدخل
+    alert("Welcome, " + firstName + "!");
+</script>
+</head>
+<body>
+</body>
+</html>-->
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events Example</title>
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 20px;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="box" onclick="changeColor()" onmouseover="highlight()" onresize="resizeBox()">Click me!</div>
+
+<script>
+    // تغيير لون الصندوق عند النقر عليه
+    function changeColor() {
+        document.getElementById("box").style.backgroundColor = "blue";
+    }
+
+    // تحويل لون النص إلى الأبيض عند تحريك المؤشر فوق الصندوق
+    function highlight() {
+        document.getElementById("box").style.color = "green";
+    }
+
+    // تغيير حجم الصندوق عند تغيير حجم نافذة المتصفح
+    function resizeBox() {
+        alert("Window resized!");
+    }
+
+    // عرض رسالة ترحيب عندما يتم تحميل الصفحة بالكامل
+    window.onload = function() {
+        alert("Page loaded!");
+    }
+</script>
+
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>this Keyword Example</title>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 20px;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="box" onclick="changeColor(this)">Box 1</div>
+<div class="box" onclick="changeColor">Box 2</div>
+
+<script>
+    function changeColor(element) {
+        element.style.backgroundColor = "blue";
+    }
+</script>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Preview</title>
+<style>
+    #image {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 200px;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+
+    .thumbnail {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div id="image">Hover over an image below to display here.</div>
+    <img class="thumbnail" src="https://via.placeholder.com/150?text=Image+1" alt="Image 1" onmouseover="upDate(this)" onmouseout="undo()">
+    <img class="thumbnail" src="https://via.placeholder.com/150?text=Image+2" alt="Image 2" onmouseover="upDate(this)" onmouseout="undo()">
+    <img class="thumbnail" src="https://via.placeholder.com/150?text=Image+3" alt="Image 3" onmouseover="upDate(this)" onmouseout="undo()">
+    <script>
+        function upDate(previewPic) {
+            console.log("Event triggered");
+            var source = previewPic.getAttribute('src');
+            var alt = previewPic.getAttribute('alt');
+            console.log("Source: " + source + ", Alt: " + alt);
+
+            var image = document.getElementById('image');
+            image.style.backgroundImage = "url('" + source + "')";
+            image.innerHTML = alt;
+        }
+
+        function undo() {
+            var image = document.getElementById('image');
+            image.style.backgroundImage = "url('')";
+            image.innerHTML = "Hover over an image below to display here.";
+        }
+    </script>
+</body>
+</html>
+
+
